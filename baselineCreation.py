@@ -11,9 +11,6 @@ basepath = '/leonardo_scratch/fast/IscrC_AIWAF/angelo/'
 date_d = np.load(basepath+'datasets/date_d.npy')
 date_n = np.load(basepath+'datasets/date_n.npy')
 
-# dataset_d = np.load(basepath+'datasets/dataset_d.npy')
-# dataset_n = np.load(basepath+'datasets/dataset_n.npy')
-
 abs_dataset_d = np.load(basepath+'datasets/abs_dataset_d.npy')
 abs_dataset_n = np.load(basepath+'datasets/abs_dataset_n.npy')
 
