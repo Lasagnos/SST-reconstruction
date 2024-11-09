@@ -1,0 +1,28 @@
+2024-10-17 18:38:33.713807: I tensorflow/core/util/util.cc:169] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2024-10-17 18:38:34.048747: E tensorflow/stream_executor/cuda/cuda_blas.cc:2981] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2024-10-17 18:38:54.289727: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1616] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 62799 MB memory:  -> device: 0, name: NVIDIA A100-SXM-64GB, pci bus id: 0000:1d:00.0, compute capability: 8.0
+2024-10-17 18:38:54.292998: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1616] Created device /job:localhost/replica:0/task:0/device:GPU:1 with 62799 MB memory:  -> device: 1, name: NVIDIA A100-SXM-64GB, pci bus id: 0000:56:00.0, compute capability: 8.0
+2024-10-17 18:38:54.293323: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1616] Created device /job:localhost/replica:0/task:0/device:GPU:2 with 62799 MB memory:  -> device: 2, name: NVIDIA A100-SXM-64GB, pci bus id: 0000:8f:00.0, compute capability: 8.0
+2024-10-17 18:38:54.293629: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1616] Created device /job:localhost/replica:0/task:0/device:GPU:3 with 62799 MB memory:  -> device: 3, name: NVIDIA A100-SXM-64GB, pci bus id: 0000:c8:00.0, compute capability: 8.0
+2024-10-17 18:38:59.013396: I tensorflow/stream_executor/cuda/cuda_blas.cc:1614] TensorFloat-32 will be used for the matrix multiplication. This will only be logged once.
+2024-10-17 18:38:59.279168: I tensorflow/stream_executor/cuda/cuda_dnn.cc:384] Loaded cuDNN version 8400
+/leonardo_scratch/fast/IscrC_AIWAF2/angelo/./valutazione10x.py:757: RuntimeWarning: Mean of empty slice
+  squared_errors = np.nanmean(diff_errors_batch**2, axis=(1, 2))# if np.any(~np.isnan(diff_errors_batch)) else np.nan
+/leonardo_scratch/fast/IscrC_AIWAF2/angelo/./valutazione10x.py:810: RuntimeWarning: Mean of empty slice
+  squared_errors = np.nanmean(diff_errors_batch**2, axis=(1, 2))# if np.any(~np.isnan(diff_errors_batch)) else np.nan
+---------------------
+residual_n: min: -9.110644340515137, max: 7.022097587585449
+baseline_n: min: 5.61483094597617, max: 28.078687727311497
+residual mean = -0.0018512280657887459, residual_std = 1.0507057905197144
+---------------------
+Array of RMSEs: [0.353022459220945, 0.3501913764833317, 0.3493110683331625, 0.3535348886062368, 0.34934086088780547, 0.3502849298272004, 0.347221971121363, 0.34947342438274814, 0.3511272493447116, 0.35023697880984783]
+Array of batch standard deviations: [0.08773860610736559, 0.08739473409794915, 0.08791297072720715, 0.08804451446338576, 0.08690234122931331, 0.09177329879029122, 0.0897850089814353, 0.08666909645951984, 0.08939416669511407, 0.09044568026584536]
+Final result: RMSE = 0.3503745207017352 ± 0.0017486142281471742
+---------------------
+Dincae - Array of RMSEs: [0.4698701799431627, 0.46987017994316266, 0.46987017994316266, 0.4698701799431627, 0.46987017994316266, 0.46991263702107855, 0.4698703021077243, 0.4698703021077243, 0.469870314083991, 0.4697794950300332]
+Dincae - Array of batch standard deviations: [0.36113486515715826, 0.3611348651571583, 0.3611348651571583, 0.3611348651571583, 0.3611348651571583, 0.36090819679738423, 0.36113476228489644, 0.36113476228489644, 0.36113476319611376, 0.3609152188861691]
+Dincae - Final result: RMSE = 0.46986539500663643 ± 3.130087634712656e-05
+---------------------
+Dincae 10% - Array of RMSEs: [0.4100445465642839, 0.4100445465642839, 0.4100445465642839, 0.4082797025445349, 0.4007476227347888, 0.4070859675591753, 0.4100445465642839, 0.41031251943914104, 0.4100445465642838, 0.41004454656428385]
+Dincae 10% - Array of batch standard deviations: [0.19432982925966924, 0.19432982925966924, 0.19432982925966924, 0.19321459490578205, 0.19227257849154777, 0.19408810010799468, 0.1943298292596692, 0.19274155698100598, 0.19432982925966924, 0.19432982925966924]
+Dincae 10% - Final result: RMSE = 0.4086693091663343 ± 0.0028188594730744394
