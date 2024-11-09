@@ -1,8 +1,5 @@
-Subfolder for the reconstruction of missing SST from measurements using machine learning.
-Data can be found in /datasets, and weights in /weights.
+Questo progetto è il lavoro del tirocinio svolto da Angelo Greco col professor Andrea Asperti dell'Università di Bologna.
 
-baselineCreation contains snippets of code used for the creation of the baseline (daily climatology).
+Consiste nell'usare tecniche di machine learning per ricostruire i dati mancanti dalle misurazioni della temperatura oceanica causate dalla presenza di ostruzioni come nuvole.
 
-testUtils contains custom callbacks created by Alessandro Testa, used for evaluating the model during training.
-
-performanceEvaluation can be used to get the final data of a model, averaging multiple validations. It also tests dincae data for comparison.
+I dati utilizzati sono prodotti dal sensore MODIS del satellite Aqua della NASA, e scaricati da https://oceancolor.gsfc.nasa.gov/.
